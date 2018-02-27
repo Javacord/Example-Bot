@@ -23,6 +23,7 @@ public class Main {
 
         // Add listeners
         api.addMessageCreateListener(new CopyAvatarCommand());
+        api.addMessageCreateListener(new UserInfoCommand());
     }
 
 }
