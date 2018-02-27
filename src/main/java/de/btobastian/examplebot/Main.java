@@ -20,6 +20,9 @@ public class Main {
 
         // We login blocking, just because it is simpler and doesn't matter here
         DiscordApi api = new DiscordApiBuilder().setToken(token).login().join();
+
+        // Add listeners
+        api.addMessageCreateListener(new CopyAvatarCommand());
     }
 
 }
