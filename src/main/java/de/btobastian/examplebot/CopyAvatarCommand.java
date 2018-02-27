@@ -11,14 +11,16 @@ public class CopyAvatarCommand implements MessageCreateListener {
      */
     @Override
     public void onMessageCreate(MessageCreateEvent event) {
-        // Check if the author is the creator of the bot (you!).
-        // You don't want that everyone can set the bot's avatar.
-        if (event.getMessage().getAuthor().isBotOwner()) {
-            event.getChannel().sendMessage("You are not allowed to use this command!");
-            return;
-        }
         // Check if the message content equals "!copyAvatar"
         if (event.getMessage().getContent().equalsIgnoreCase("!copyAvatar")) {
+
+            // Check if the author is the creator of the bot (you!).
+            // You don't want that everyone can set the bot's avatar.
+            if (!event.getMessage().getAuthor().isBotOwner()) {
+                event.getChannel().sendMessage("You are not allowed to use this command!");
+                return;
+            }
+
             event.getApi()
                     .updateAvatar(event.getMessage().getAuthor().getAvatar()) // Update the avatar
                     .thenAccept(aVoid -> event.getChannel().sendMessage("Ok, I'm now using your avatar :-)")) // Send the user a message if the update was successful
