@@ -30,6 +30,10 @@ public class Main {
         // Add listeners
         api.addMessageCreateListener(new CopyAvatarCommand());
         api.addMessageCreateListener(new UserInfoCommand());
+
+        // Log a message, if the bot joined or left a server
+        api.addServerJoinListener(event -> System.out.println("Joined server " + event.getServer().getName()));
+        api.addServerLeaveListener(event -> System.out.println("Left server " + event.getServer().getName()));
     }
 
 }
