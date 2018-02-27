@@ -2,6 +2,7 @@ package de.btobastian.examplebot;
 
 import de.btobastian.javacord.DiscordApi;
 import de.btobastian.javacord.DiscordApiBuilder;
+import de.btobastian.javacord.utils.logging.LoggerUtil;
 
 public class Main {
 
@@ -15,6 +16,9 @@ public class Main {
             System.err.println("Please provide a valid token as the first argument!");
             return;
         }
+
+        // Enable debugging in case, no slf4j logger was found
+        LoggerUtil.setDebug(true);
 
         String token = args[0];
 
