@@ -6,9 +6,9 @@ This bot is an example for the [Javacord](https://github.com/BtoBastian/Javacord
 The bot currently supports the following commands:
 - **`!copyAvatar`**
 Sets the avatar of the bot to the avatar of the user who used this command. This command can only be used by the creator of the bot.
-You can find the implementation here: [CopyAvatarCommand.java](https://github.com/BtoBastian/JavacordExampleBot/blob/master/src/main/java/de/btobastian/examplebot/CopyAvatarCommand.java)
+You can find the implementation here: [CopyAvatarCommand.java](https://github.com/BtoBastian/JavacordExampleBot/blob/master/src/main/java/de/btobastian/examplebot/commands/CopyAvatarCommand.java)
 - **`!userInfo`**
-Shows some basic information (id, name, etc.) about the user who used this command. You can find the implementation here: [UserInfoCommand.java](https://github.com/BtoBastian/JavacordExampleBot/blob/master/src/main/java/de/btobastian/examplebot/UserInfoCommand.java)
+Shows some basic information (id, name, etc.) about the user who used this command. You can find the implementation here: [UserInfoCommand.java](https://github.com/BtoBastian/JavacordExampleBot/blob/master/src/main/java/de/btobastian/examplebot/commands/UserInfoCommand.java)
 
 ## Running the bot
 

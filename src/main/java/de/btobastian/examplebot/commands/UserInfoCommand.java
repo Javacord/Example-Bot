@@ -1,4 +1,4 @@
-package de.btobastian.examplebot;
+package de.btobastian.examplebot.commands;
 
 import de.btobastian.javacord.entities.Activity;
 import de.btobastian.javacord.entities.message.MessageAuthor;

@@ -1,5 +1,7 @@
 package de.btobastian.examplebot;
 
+import de.btobastian.examplebot.commands.CopyAvatarCommand;
+import de.btobastian.examplebot.commands.UserInfoCommand;
 import de.btobastian.javacord.DiscordApi;
 import de.btobastian.javacord.DiscordApiBuilder;
 import de.btobastian.javacord.utils.logging.LoggerUtil;

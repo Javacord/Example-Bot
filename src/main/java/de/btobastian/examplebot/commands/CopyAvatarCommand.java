@@ -1,4 +1,4 @@
-package de.btobastian.examplebot;
+package de.btobastian.examplebot.commands;
 
 import de.btobastian.javacord.events.message.MessageCreateEvent;
 import de.btobastian.javacord.listeners.message.MessageCreateListener;
