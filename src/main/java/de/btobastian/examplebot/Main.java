@@ -22,10 +22,14 @@ public class Main {
         // Enable debugging in case, no slf4j logger was found
         LoggerUtil.setDebug(true);
 
+        // The token is the first argument of program
         String token = args[0];
 
         // We login blocking, just because it is simpler and doesn't matter here
         DiscordApi api = new DiscordApiBuilder().setToken(token).login().join();
+
+        // Print the invite url of bot
+        System.out.println("You can invite me by using the following url: " + api.createBotInvite());
 
         // Add listeners
         api.addMessageCreateListener(new CopyAvatarCommand());
