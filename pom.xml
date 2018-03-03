@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>de.btobastian.examplebot</groupId>
+    <groupId>org.javacord.examplebot</groupId>
     <artifactId>examplebot</artifactId>
     <version>1.0.0</version>
     <name>ExampleBot</name>
@@ -22,7 +22,7 @@
         <dependency>
             <groupId>de.btobastian</groupId>
             <artifactId>Javacord</artifactId>
-            <version>7a0260e</version>
+            <version>0c08124</version>
         </dependency>
 
         <!-- The logging framework. We use logback-classic. -->
@@ -76,7 +76,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>de.btobastian.javacordbot.Main</mainClass>
+                            <mainClass>org.javacord.examplebot.Main</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

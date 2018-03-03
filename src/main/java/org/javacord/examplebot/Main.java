@@ -1,10 +1,10 @@
-package de.btobastian.examplebot;
+package org.javacord.examplebot;
 
-import de.btobastian.examplebot.command.CopyAvatarCommand;
-import de.btobastian.examplebot.command.UserInfoCommand;
-import de.btobastian.javacord.DiscordApi;
-import de.btobastian.javacord.DiscordApiBuilder;
-import de.btobastian.javacord.utils.logging.LoggerUtil;
+import org.javacord.examplebot.command.CopyAvatarCommand;
+import org.javacord.examplebot.command.UserInfoCommand;
+import org.javacord.DiscordApi;
+import org.javacord.DiscordApiBuilder;
+import org.javacord.util.logging.LoggerUtil;
 
 public class Main {
 
@@ -19,16 +19,16 @@ public class Main {
             return;
         }
 
-        // Enable debugging in case, no slf4j logger was found
+        // Enable debugging, if no slf4j logger was found
         LoggerUtil.setDebug(true);
 
-        // The token is the first argument of program
+        // The token is the first argument of the program
         String token = args[0];
 
         // We login blocking, just because it is simpler and doesn't matter here
         DiscordApi api = new DiscordApiBuilder().setToken(token).login().join();
 
-        // Print the invite url of bot
+        // Print the invite url of the bot
         System.out.println("You can invite me by using the following url: " + api.createBotInvite());
 
         // Add listeners

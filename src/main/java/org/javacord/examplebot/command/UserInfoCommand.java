@@ -1,18 +1,18 @@
-package de.btobastian.examplebot.command;
+package org.javacord.examplebot.command;
 
-import de.btobastian.javacord.entities.Activity;
-import de.btobastian.javacord.entities.message.MessageAuthor;
-import de.btobastian.javacord.entities.message.embed.EmbedBuilder;
-import de.btobastian.javacord.events.message.MessageCreateEvent;
-import de.btobastian.javacord.exceptions.MissingPermissionsException;
-import de.btobastian.javacord.listeners.message.MessageCreateListener;
-import de.btobastian.javacord.utils.ExceptionLogger;
+import org.javacord.entity.activity.Activity;
+import org.javacord.entity.message.MessageAuthor;
+import org.javacord.entity.message.embed.EmbedBuilder;
+import org.javacord.event.message.MessageCreateEvent;
+import org.javacord.exception.MissingPermissionsException;
+import org.javacord.listener.message.MessageCreateListener;
+import org.javacord.util.logging.ExceptionLogger;
 
 public class UserInfoCommand implements MessageCreateListener {
 
     /*
      * This command can be used to display information about the user who used the command.
-     * It's a good example for the MessageAuthor, MessageBuilder and ExceptionLogger class
+     * It's a good example for the MessageAuthor, MessageBuilder and ExceptionLogger class.
      */
     @Override
     public void onMessageCreate(MessageCreateEvent event) {

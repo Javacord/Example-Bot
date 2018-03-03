@@ -1,7 +1,7 @@
-package de.btobastian.examplebot.command;
+package org.javacord.examplebot.command;
 
-import de.btobastian.javacord.events.message.MessageCreateEvent;
-import de.btobastian.javacord.listeners.message.MessageCreateListener;
+import org.javacord.event.message.MessageCreateEvent;
+import org.javacord.listener.message.MessageCreateListener;
 
 public class CopyAvatarCommand implements MessageCreateListener {
 
