@@ -1,12 +1,12 @@
 package org.javacord.examplebot.command;
 
-import org.javacord.entity.activity.Activity;
-import org.javacord.entity.message.MessageAuthor;
-import org.javacord.entity.message.embed.EmbedBuilder;
-import org.javacord.event.message.MessageCreateEvent;
-import org.javacord.exception.MissingPermissionsException;
-import org.javacord.listener.message.MessageCreateListener;
-import org.javacord.util.logging.ExceptionLogger;
+import org.javacord.api.entity.activity.Activity;
+import org.javacord.api.entity.message.MessageAuthor;
+import org.javacord.api.entity.message.embed.EmbedBuilder;
+import org.javacord.api.event.message.MessageCreateEvent;
+import org.javacord.api.exception.MissingPermissionsException;
+import org.javacord.api.listener.message.MessageCreateListener;
+import org.javacord.api.util.logging.ExceptionLogger;
 
 public class UserInfoCommand implements MessageCreateListener {
 

@@ -20,9 +20,10 @@
     <dependencies>
         <!-- The Javacord dependency -->
         <dependency>
-            <groupId>de.btobastian</groupId>
-            <artifactId>Javacord</artifactId>
-            <version>0c08124</version>
+            <groupId>com.github.Javacord.Javacord</groupId>
+            <artifactId>javacord</artifactId>
+            <version>9e457ab</version>
+            <type>pom</type>
         </dependency>
 
         <!-- The logging framework. We use logback-classic. -->
@@ -51,7 +52,7 @@
                             <createDependencyReducedPom>false</createDependencyReducedPom>
                             <artifactSet>
                                 <includes>
-                                    <include>de.btobastian:Javacord</include>
+                                    <include>org.github.Javacord.Javacord:Javacord</include>
                                 </includes>
                             </artifactSet>
                         </configuration>

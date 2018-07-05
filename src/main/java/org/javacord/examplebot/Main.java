@@ -1,10 +1,9 @@
 package org.javacord.examplebot;
 
+import org.javacord.api.DiscordApiBuilder;
+import org.javacord.api.util.logging.FallbackLoggerConfiguration;
 import org.javacord.examplebot.command.CopyAvatarCommand;
 import org.javacord.examplebot.command.UserInfoCommand;
-import org.javacord.DiscordApi;
-import org.javacord.DiscordApiBuilder;
-import org.javacord.util.logging.LoggerUtil;
 
 public class Main {
 
@@ -20,13 +19,13 @@ public class Main {
         }
 
         // Enable debugging, if no slf4j logger was found
-        LoggerUtil.setDebug(true);
+        FallbackLoggerConfiguration.setDebug(true);
 
         // The token is the first argument of the program
         String token = args[0];
 
         // We login blocking, just because it is simpler and doesn't matter here
-        DiscordApi api = new DiscordApiBuilder().setToken(token).login().join();
+        org.javacord.api.DiscordApi api = new DiscordApiBuilder().setToken(token).login().join();
 
         // Print the invite url of the bot
         System.out.println("You can invite me by using the following url: " + api.createBotInvite());
