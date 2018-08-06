@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration name="Javacord Example Bot" status="INFO" strict="true">
+    <Appenders>
+        <Console name="Console Appender">
+            <PatternLayout>
+                <Pattern><![CDATA[%d <%-5p> <%-35.35t> <%x> <%X> <%50.50c> %m%n]]></Pattern>
+            </PatternLayout>
+            <Filters>
+                <ThresholdFilter level="INFO"/>
+            </Filters>
+        </Console>
+        <File name="File Appender" fileName="log/javacord-example-bot.log" createOnDemand="true">
+            <PatternLayout>
+                <Pattern><![CDATA[%d <%-5p> <%-35.35t> <%x> <%X> <%50.50c> %m%n]]></Pattern>
+            </PatternLayout>
+        </File>
+    </Appenders>
+    <Loggers>
+        <Root level="DEBUG">
+            <AppenderRef ref="Console Appender"/>
+            <AppenderRef ref="File Appender"/>
+        </Root>
+    </Loggers>
+</Configuration>
