@@ -1,11 +1,15 @@
 package org.javacord.examplebot;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.javacord.api.DiscordApiBuilder;
 import org.javacord.api.util.logging.FallbackLoggerConfiguration;
 import org.javacord.examplebot.command.CopyAvatarCommand;
 import org.javacord.examplebot.command.UserInfoCommand;
 
 public class Main {
+
+    private static Logger logger = LogManager.getLogger(Main.class);
 
     /**
      * The entrance point of our program.
@@ -28,15 +32,15 @@ public class Main {
         org.javacord.api.DiscordApi api = new DiscordApiBuilder().setToken(token).login().join();
 
         // Print the invite url of the bot
-        System.out.println("You can invite me by using the following url: " + api.createBotInvite());
+        logger.info("You can invite me by using the following url: " + api.createBotInvite());
 
         // Add listeners
         api.addMessageCreateListener(new CopyAvatarCommand());
         api.addMessageCreateListener(new UserInfoCommand());
 
         // Log a message, if the bot joined or left a server
-        api.addServerJoinListener(event -> System.out.println("Joined server " + event.getServer().getName()));
-        api.addServerLeaveListener(event -> System.out.println("Left server " + event.getServer().getName()));
+        api.addServerJoinListener(event -> logger.info("Joined server " + event.getServer().getName()));
+        api.addServerLeaveListener(event -> logger.info("Left server " + event.getServer().getName()));
     }
 
 }
