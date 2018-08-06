@@ -10,15 +10,26 @@ You can find the implementation here: [CopyAvatarCommand.java](https://github.co
 - **`!userInfo`**
 Shows some basic information (id, name, etc.) about the user who used this command. You can find the implementation here: [UserInfoCommand.java](https://github.com/Javacord/Example-Bot/blob/master/src/main/java/org/javacord/examplebot/command/UserInfoCommand.java)
 
-## Compiling the bot
+## Running the bot for testing
 
-You can compile the bot by running `gradlew jar`. The created fat jar located at `/build/libs/example-bot.jar` contains all
-required dependencies (Javacord and Log4j2) to run the bot.
-Take a look at the [build.gradle](https://github.com/Javacord/Example-Bot/blob/master/build.gradle) file.
-
-## Running the bot
-
-After compiling the bot using Gradle you can run the bot using `java -jar example-bot.jar yourBotToken`. 
+To run the bot right from Gradle (just for testing, not for production) you can do `gradlew run -P token=your-bot-token-here`.
 You can view the login process by looking at the 
 [Main.java](https://github.com/Javacord/Example-Bot/blob/master/src/main/java/org/javacord/examplebot/Main.java)
 class.
+
+## Building the bot for production
+
+To get a distributable package you run `gradlew distZip`. The created zip is located at `build/distributions/examplebot-1.0.0.zip` and contains all necessary things to run the bot, except the token.
+Take a look at the [build.gradle](https://github.com/Javacord/Example-Bot/blob/master/build.gradle) file.
+
+## Running the bot for production
+
+After you built the distributable package as described in the previous section, you can copy over the zip file to where you want to run your bot. There you unzip it whereever you like and run one of the included start scripts.
+
+```shell
+unzip examplebot-1.0.0.zip
+cd examplebot-1.0.0
+bin/examplebot your-bot-token-here
+```
+
+The log file will be created in a `log` directory where you execute the last command.
