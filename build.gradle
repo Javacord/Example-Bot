@@ -1,5 +1,5 @@
 plugins {
-    id 'java'
+    id 'application'
 }
 
 group = 'org.javacord.examplebot'
@@ -8,7 +8,6 @@ version = '1.0.0'
 description = 'An example for the Javacord library.'
 
 sourceCompatibility = 1.8
-targetCompatibility = 1.8
 
 // Javacord is on Maven central
 repositories {
@@ -18,22 +17,14 @@ repositories {
 // The dependencies of the bot. Javacord and Log4J for logging
 dependencies {
     implementation group: 'org.javacord', name: 'javacord', version:'3.0.0'
-    implementation group: 'org.apache.logging.log4j', name: 'log4j-core', version:'2.11.1'
+    runtimeOnly group: 'org.apache.logging.log4j', name: 'log4j-core', version:'2.11.1'
 }
 
-// This part creates a fat jar, that contains all dependencies to run the bot
-jar {
-    archiveName = 'example-bot.jar'
+mainClassName = 'org.javacord.examplebot.Main'
 
-    from {
-        configurations.runtimeClasspath.collect {
-            it.isDirectory() ? it : zipTree(it)
-        }
+def token = findProperty('token')
+if (token) {
+    run {
+        args token
     }
-
-    manifest {
-        attributes 'Main-Class': 'org.javacord.examplebot.Main'
-    }
-
-    exclude 'META-INF/*.RSA', 'META-INF/*.SF','META-INF/*.DSA'
 }
