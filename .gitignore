@@ -13,3 +13,6 @@
 *.iml
 *.ipr
 *.iws
+
+# ignore the log from running the bot
+/log/
