@@ -10,9 +10,15 @@ You can find the implementation here: [CopyAvatarCommand.java](https://github.co
 - **`!userInfo`**
 Shows some basic information (id, name, etc.) about the user who used this command. You can find the implementation here: [UserInfoCommand.java](https://github.com/Javacord/Example-Bot/blob/master/src/main/java/org/javacord/examplebot/command/UserInfoCommand.java)
 
+## Compiling the bot
+
+You can compile the bot by running `gradlew jar`. The created fat jar located at `/build/libs/example-bot.jar` contains all
+required dependencies (Javacord and Log4j2) to run the bot.
+Take a look at the [build.gradle](https://github.com/Javacord/Example-Bot/blob/master/build.gradle) file.
+
 ## Running the bot
 
-After compiling the bot using Maven (take a look at the [pom.xml](https://github.com/Javacord/Example-Bot/blob/master/pom.xml)),
-you can run the bot using `java -jar examplebot.jar yourBotToken`. You can view the login process by looking at the 
+After compiling the bot using Gradle you can run the bot using `java -jar example-bot.jar yourBotToken`. 
+You can view the login process by looking at the 
 [Main.java](https://github.com/Javacord/Example-Bot/blob/master/src/main/java/org/javacord/examplebot/Main.java)
 class.
