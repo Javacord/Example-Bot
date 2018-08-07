@@ -22,10 +22,3 @@ dependencies {
 }
 
 mainClassName = 'org.javacord.examplebot.Main'
-
-def token = findProperty('token')
-if (token) {
-    run {
-        args token
-    }
-}
