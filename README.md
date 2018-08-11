@@ -12,7 +12,7 @@ Shows some basic information (id, name, etc.) about the user who used this comma
 
 ## Running the bot for testing
 
-To run the bot right from Gradle (just for testing, not for production) you can do `gradlew run -P token=your-bot-token-here`.
+To run the bot right from Gradle (just for testing, not for production) you can do `gradlew run --args your-bot-token-here`.
 You can view the login process by looking at the 
 [Main.java](https://github.com/Javacord/Example-Bot/blob/master/src/main/java/org/javacord/examplebot/Main.java)
 class.
