@@ -23,7 +23,7 @@ public class CopyAvatarCommand implements MessageCreateListener {
 
             event.getApi()
                     .updateAvatar(event.getMessage().getAuthor().getAvatar()) // Update the avatar
-                    .thenAccept(aVoid -> event.getChannel().sendMessage("Ok, I'm now using your avatar :-)")) // Send the user a message if the update was successful
+                    .thenRun(() -> event.getChannel().sendMessage("Ok, I'm now using your avatar :-)")) // Send the user a message if the update was successful
                     .exceptionally(throwable -> {
                         // Send the user a message, if the update failed
                         event.getChannel().sendMessage("Something went wrong: " + throwable.getMessage());
