@@ -17,7 +17,7 @@ public class UserInfoCommand implements MessageCreateListener {
     @Override
     public void onMessageCreate(MessageCreateEvent event) {
         // Check if the message content equals "!userInfo"
-        if (event.getMessage().getContent().equalsIgnoreCase("!userInfo")) {
+        if (event.getMessageContent().equalsIgnoreCase("!userInfo")) {
             MessageAuthor author = event.getMessage().getAuthor();
             EmbedBuilder embed = new EmbedBuilder()
                     .setTitle("User Info")
