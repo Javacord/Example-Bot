@@ -2,6 +2,7 @@ package org.javacord.examplebot;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.javacord.api.DiscordApi;
 import org.javacord.api.DiscordApiBuilder;
 import org.javacord.api.util.logging.FallbackLoggerConfiguration;
 import org.javacord.examplebot.command.CopyAvatarCommand;
@@ -29,7 +30,7 @@ public class Main {
         String token = args[0];
 
         // We login blocking, just because it is simpler and doesn't matter here
-        org.javacord.api.DiscordApi api = new DiscordApiBuilder().setToken(token).login().join();
+        DiscordApi api = new DiscordApiBuilder().setToken(token).login().join();
 
         // Print the invite url of the bot
         logger.info("You can invite me by using the following url: " + api.createBotInvite());
