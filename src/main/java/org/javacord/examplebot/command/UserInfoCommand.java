@@ -28,6 +28,7 @@ public class UserInfoCommand implements MessageCreateListener {
             // Keep in mind that a message author can either be a webhook or a normal user
             author.asUser().ifPresent(user -> {
                 embed.addField("Online Status", user.getStatus().getStatusString(), true);
+                embed.addField("Connected Clients", user.getCurrentClients().toString());
                 // The User#getActivity() method returns an Optional
                 embed.addField("Activity", user.getActivity().map(Activity::getName).orElse("none"), true);
             });
