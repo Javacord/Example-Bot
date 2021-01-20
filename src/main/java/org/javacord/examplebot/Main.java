@@ -19,7 +19,7 @@ public class Main {
      */
     public static void main(String[] args) {
         if (args.length < 1) {
-            System.err.println("Please provide a valid token as the first argument!");
+            logger.error("Please provide a valid token as the first argument!");
             return;
         }
 
