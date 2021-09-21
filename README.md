@@ -20,7 +20,7 @@ class.
 ## Building the bot for production
 
 To get a distributable package you run `gradlew distZip`. The created zip is located at `build/distributions/examplebot-1.0.0.zip` and contains all necessary things to run the bot, except the token.
-Take a look at the [build.gradle](https://github.com/Javacord/Example-Bot/blob/master/build.gradle) file.
+Take a look at the [build.gradle.kts](https://github.com/Javacord/Example-Bot/blob/master/build.gradle.kts) file.
 
 ## Running the bot for production
 
