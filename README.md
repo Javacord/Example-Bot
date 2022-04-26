@@ -1,4 +1,4 @@
-# Javacord Example Bot <a href="https://javacord.org/wiki"><img src="https://shields.javacord.org/badge/Wiki-Home-red.svg?style=flat-square" alt="Javacord Wiki"></a> <a href="https://discord.gg/0qJ2jjyneLEgG7y3"><img src="https://shields.javacord.org/discord/151037561152733184.svg?colorB=%237289DA&label=Discord&style=flat-square" alt="Discord Server"></a>
+# Javacord Example Bot <a href="https://javacord.org/wiki"><img src="https://shields.io/badge/Wiki-Home-red.svg?style=flat-square" alt="Javacord Wiki"></a> <a href="https://discord.gg/0qJ2jjyneLEgG7y3"><img src="https://shields.io/discord/151037561152733184.svg?colorB=%237289DA&label=Discord&style=flat-square" alt="Discord Server"></a>
 This bot is an example for the [Javacord](https://github.com/Javacord/Javacord) library.
 
 ## Features
