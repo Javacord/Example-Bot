@@ -20,9 +20,9 @@ repositories {
 
 // The dependencies of the bot. Javacord and Log4J for logging
 dependencies {
-    implementation("org.javacord:javacord:3.1.1")
-    implementation("org.apache.logging.log4j:log4j-api:2.17.0")
-    runtimeOnly("org.apache.logging.log4j:log4j-core:2.17.0")
+    implementation("org.javacord:javacord:3.6.0")
+    implementation("org.apache.logging.log4j:log4j-api:2.17.2")
+    runtimeOnly("org.apache.logging.log4j:log4j-core:2.17.2")
 }
 
 application {

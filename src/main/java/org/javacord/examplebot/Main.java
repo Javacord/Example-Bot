@@ -10,7 +10,7 @@ import org.javacord.examplebot.command.UserInfoCommand;
 
 public class Main {
 
-    private static Logger logger = LogManager.getLogger(Main.class);
+    private static final Logger logger = LogManager.getLogger(Main.class);
 
     /**
      * The entrance point of our program.
@@ -30,7 +30,8 @@ public class Main {
         String token = args[0];
 
         // We login blocking, just because it is simpler and doesn't matter here
-        DiscordApi api = new DiscordApiBuilder().setToken(token).login().join();
+        // Also we need all intents to get message content and user activities.
+        DiscordApi api = new DiscordApiBuilder().setToken(token).setAllIntents().login().join();
 
         // Print the invite url of the bot
         logger.info("You can invite me by using the following url: " + api.createBotInvite());
